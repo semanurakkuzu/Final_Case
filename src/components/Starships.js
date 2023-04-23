@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../image/starwars_logo.png'
 function Starships() {
   return (
-    <div className="">
+    <div className="theme-dark">
     <div className="container-fluid">
       <div className="container text-center pt-5">
         <img width={300} src={logo} alt="star wars" />
