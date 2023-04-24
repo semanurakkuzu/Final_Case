@@ -1,5 +1,5 @@
 import logo from '../image/starwars_logo.png'
-function Starships() {
+function StarShips() {
   return (
     <div className="theme-dark">
       <div className="container-fluid">
@@ -49,4 +49,4 @@ function Starships() {
   )
 }
 
-export default Starships
+export default StarShips
