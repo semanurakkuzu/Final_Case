@@ -1,15 +1,23 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 
-body{
-  font-family: 'Patrick Hand', cursive;
-}
 
 .theme-dark {
   background-image: url('https://cdn.pixabay.com/photo/2012/02/25/19/11/nightsky-16967_960_720.jpg');
   background-size: auto;
   min-height: 100vh;
+  font-family: 'Patrick Hand', cursive;
 }
 
-.cardDetail {
-  max-width:700px;
+.cardImg{
+  max-width:300px ;
 }
+
+.detailCard {
+  max-width:800px;
+}
+
+.detailCardImg {
+ max-width: 400px;
+}
+
