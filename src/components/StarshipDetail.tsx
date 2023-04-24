@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
-function StarshipDetail() {
+function StarShipDetail() {
   return (
     <div className="theme-dark">
       <div className="container pt-5">
@@ -70,4 +70,4 @@ function StarshipDetail() {
   )
 }
 
-export default StarshipDetail
+export default StarShipDetail
