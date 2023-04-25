@@ -1,4 +1,5 @@
 import { StarShip } from '../types/Starship'
+import { Link } from "react-router-dom";
 
 type StarShipCardProps = {
   starShip: StarShip
@@ -6,7 +7,7 @@ type StarShipCardProps = {
 
 function StarShipCard({starShip}: StarShipCardProps) {
   return (
-    <div className="card">
+    <Link to={`starship/${(starShip.url).split('starships/').pop()}`} className="card" >
     <img
       src="https://www.denofgeek.com/wp-content/uploads/2019/12/x-wing.jpg?w=1024"
       className="rounded card-img-top cardImg"
@@ -25,7 +26,7 @@ function StarShipCard({starShip}: StarShipCardProps) {
         <span>{starShip.hyperdrive_rating}</span>
       </div>
     </div>
-  </div>
+  </Link>
   )
 }
 

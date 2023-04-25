@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/starship/:starShipId",
+    path: "/starship/:id",
     element: <StarShipDetail />,
   },
 
