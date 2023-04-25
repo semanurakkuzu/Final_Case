@@ -13,7 +13,7 @@ import { Provider } from 'react-redux'
 import './index.css'
 import App from './App'
 import StarShipDetail from './components/StarShipDetail'
-
+import Error from './components/Error'
 import reportWebVitals from './reportWebVitals'
 
 const router = createBrowserRouter([
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/starship/:id",
     element: <StarShipDetail />,
+  },
+  {
+    path: "*",
+    element: <Error/>,
   },
 
 
