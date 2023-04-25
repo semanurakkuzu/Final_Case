@@ -1,28 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 // Bootstrap CSS
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css'
 // Bootstrap Bundle JS
-import "bootstrap/dist/js/bootstrap.bundle.min";
-import { QueryClient, QueryClientProvider} from 'react-query'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
 
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { QueryClient, QueryClientProvider } from 'react-query'
 
+import { store } from './redux/store'
+import { Provider } from 'react-redux'
 
+import './index.css'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
 
 const queryClient = new QueryClient()
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-    <QueryClientProvider client={queryClient}>
-    <App />
-    </QueryClientProvider>
-);
+  <QueryClientProvider client={queryClient}>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </QueryClientProvider>
+)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals()
