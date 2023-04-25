@@ -13,3 +13,9 @@ export const fetchStarShipSearch = async(searchInputValue: string) => {
 
     return data;
 }
+
+export const fetchShip = async(id: string | undefined) => {
+    const { data } = await axios.get(`${starShipEndPoint}${id}`)
+
+    return data;
+}
