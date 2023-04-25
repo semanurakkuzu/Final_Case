@@ -14,13 +14,13 @@ export const StarShipsSlice = createSlice({
   name: 'starships',
   initialState,
   reducers: {
-    setStarShip: (state, action) => {
+    setStarShips: (state, action) => {
       state.starShipData = action.payload
     }, 
   },
 })
 
-export const { setStarShip } = StarShipsSlice.actions
-export const selectStarShip = (state: RootState) => state.starships.starShipData
+export const { setStarShips } = StarShipsSlice.actions
+export const selectStarShips = (state: RootState) => state.starships.starShipData
 
 export default StarShipsSlice.reducer

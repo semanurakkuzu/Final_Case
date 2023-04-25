@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import logo from '../image/starwars_logo.png';
 import { useAppDispatch } from '../redux/hooks';
-import { setStarShip } from '../redux/starShipsSlice';
+import { setStarShips } from '../redux/starShipsSlice';
 import { useQuery } from 'react-query';
 import { fetchStarShipSearch } from '../services/starshipService';
 import { useDebounce } from 'use-debounce';
@@ -16,7 +16,7 @@ function StarShipSearch() {
   const result = useQuery(['ships', debouncedSearchInputValue], () => fetchStarShipSearch(debouncedSearchInputValue));
 
   if (result.status === 'success') {
-    dispatch(setStarShip(result.data.results));
+    dispatch(setStarShips(result.data.results));
   }
 
   function handleSearchInputChange(event: React.SyntheticEvent<EventTarget>) {

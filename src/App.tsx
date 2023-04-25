@@ -1,8 +1,9 @@
-import StarShips from "./components/Starships";
+import StarShips from "./components/StarShips";
+
 function App() {
   return (
    <div>
-     <StarShips></StarShips>
+    <StarShips></StarShips>
    </div>
   );
 }
