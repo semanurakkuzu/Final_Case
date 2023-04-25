@@ -1,15 +1,20 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
+
+
 function StarShipDetail() {
+
+
   return (
     <div className="theme-dark">
       <div className="container pt-5">
         <div className="card mx-auto detailCard py-2">
           <div className="ms-3">
-            <button className="btn fs-3">
+            <Link to='/' className="btn fs-3">
             <FontAwesomeIcon icon={faArrowLeftLong} />
-            </button>
+            </Link>
           </div>
           <div className="card-body text-center">
             <img
