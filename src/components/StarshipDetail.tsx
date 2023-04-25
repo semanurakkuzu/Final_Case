@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
@@ -14,12 +14,16 @@ const {id} = useParams()
 
 const dispatch = useAppDispatch();
 
-const ship = useQuery(['ship', id], () => 
+const {data, status} = useQuery(['ship', id], () => 
 fetchShip(id))
 
-if (ship.status === 'success') {
-  dispatch(setStarShip(ship.data));
-}
+
+useEffect(() => {
+  if (status === 'success') {
+    dispatch(setStarShip(data));
+  }
+}, [data, status, dispatch])
+
 
 const starShip = useAppSelector((state) => state.starshipDetail.starShip);
 
