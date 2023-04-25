@@ -1,39 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit'
-import type { PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from './store'
+import type { StarShip } from '../types/Starship'
 
-
-// Define a type for the slice state
-interface CounterState {
-  value: number
+interface StarShipState {
+  starShipData: Array<StarShip> | null
 }
 
-// Define the initial state using that type
-const initialState: CounterState = {
-  value: 0,
+const initialState: StarShipState = {
+  starShipData: null
 }
 
 export const StarShipsSlice = createSlice({
-  name: 'starShips',
-  // `createSlice` will infer the state type from the `initialState` argument
+  name: 'starships',
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1
-    },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    // Use the PayloadAction type to declare the contents of `action.payload`
-    incrementByAmount: (state, action: PayloadAction<number>) => {
-      state.value += action.payload
-    },
+    setStarShip: (state, action) => {
+      state.starShipData = action.payload
+    }, 
   },
 })
 
-export const { increment, decrement, incrementByAmount } = StarShipsSlice.actions
-
-// Other code such as selectors can use the imported `RootState` type
-export const selectCount = (state: RootState) => state.starShips.value
+export const { setStarShip } = StarShipsSlice.actions
+export const selectStarShip = (state: RootState) => state.starships.starShipData
 
 export default StarShipsSlice.reducer
