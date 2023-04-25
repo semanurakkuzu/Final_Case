@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import  starShipsReducer from './starShipsSlice'
-
+import starShipDetailReducer from './starShipDetailSlice'
 
 export const store = configureStore({
   reducer: {
     starships: starShipsReducer,
+    starshipDetail: starShipDetailReducer,
+   
   },
 })
 
