@@ -1,21 +1,15 @@
-import axios from "axios"
+import axios from 'axios';
 
-const starShipEndPoint = 'https://swapi.dev/api/starships/'
+const starShipEndPoint = 'https://swapi.dev/api/starships/';
 
-export const fetchStarShipList = async() => {
-    const {data} = await axios.get(starShipEndPoint)
+export const fetchStarShipList = async (searchInputValue: string, pageParam = 1) => {
+  const { data } = await axios.get(`${starShipEndPoint}?search=${searchInputValue}&page=${pageParam}`);
 
-    return data;
-}
+  return data;
+};
 
-export const fetchStarShipSearch = async(searchInputValue: string) => {
-    const { data } = await axios.get(`${starShipEndPoint}?search=${searchInputValue}`)
+export const fetchShip = async (id: string | undefined) => {
+  const { data } = await axios.get(`${starShipEndPoint}${id}`);
 
-    return data;
-}
-
-export const fetchShip = async(id: string | undefined) => {
-    const { data } = await axios.get(`${starShipEndPoint}${id}`)
-
-    return data;
-}
+  return data;
+};
