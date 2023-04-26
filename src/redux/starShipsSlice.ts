@@ -2,8 +2,16 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { RootState } from './store'
 import type { StarShip } from '../types/Starship'
 
+
 interface StarShipState {
-  starShipData: Array<StarShip> | null
+  starShipData: { 
+    pagesParams: Array<String>
+    pages:[ {
+      count: Number
+      next: String
+      previous : null
+      results: Array<StarShip> 
+    }]} | null
 }
 
 const initialState: StarShipState = {
