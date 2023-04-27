@@ -51,72 +51,80 @@ function StarShipDetail() {
               <div className="detailImgContainer mb-3">
                 <img src={starShipCode.icon} className="detailCardImg " alt="starship" />
               </div>
-              <div className='row'>
+              <div className="row">
                 <div className="col card-text fs-6">
-                <div className="fw-semibold">Model</div>
-                <span>{starShip.model}</span>
+                  <div className="fw-semibold">Model</div>
+                  <span>{starShip.model}</span>
+                </div>
+                <div className="col card-text fs-6">
+                  <div className="fw-semibold">Manufacturer</div>
+                  <span>{starShip.manufacturer}</span>
+                </div>
               </div>
-              <div className="col card-text fs-6">
-                <div className="fw-semibold">Manufacturer</div>
-                <span>{starShip.manufacturer}</span>
-              </div></div>
               <div className="row mt-5">
                 <div className="col card-text fs-5">
-                  <OverlayTrigger key="1" placement="top" overlay={<Tooltip id="tooltip-top">Hyperdrive Rating</Tooltip>}>
-                    <span className="fw-semibold">
-                      <FontAwesomeIcon icon={faSpaceShuttle} />
-                    </span>
-                  </OverlayTrigger>
+                  <div>
+                    <OverlayTrigger
+                      key="1"
+                      placement="top"
+                      overlay={<Tooltip id="tooltip-top">Hyperdrive Rating</Tooltip>}
+                    >
+                      <span className="fw-semibold">
+                        <FontAwesomeIcon icon={faSpaceShuttle} />
+                      </span>
+                    </OverlayTrigger>
+                  </div>
+                  <div className='fs-6 mt-2'>{starShip.hyperdrive_rating}</div>
                 </div>
                 <div className="col card-text fs-5">
-                  <OverlayTrigger key="1" placement="top" overlay={<Tooltip id={"tooltip-top"}>Passengers</Tooltip>}>
-                    <span className="fw-semibold">
-                      <FontAwesomeIcon icon={faUserGroup} />
-                    </span>
-                  </OverlayTrigger>
+                  <div>
+                    <OverlayTrigger key="1" placement="top" overlay={<Tooltip id={'tooltip-top'}>Passengers</Tooltip>}>
+                      <span className="fw-semibold">
+                        <FontAwesomeIcon icon={faUserGroup} />
+                      </span>
+                    </OverlayTrigger>
+                  </div>
+                  <div className='fs-6 mt-2'>{starShip.passengers}</div>
                 </div>
                 <div className="col card-text fs-5">
-                <OverlayTrigger key="1" placement="top" overlay={<Tooltip id={`tooltip-top`}>Max Atmosphering Speed</Tooltip>}>
-                    <span className="fw-semibold">
-                    <FontAwesomeIcon icon={faBolt} />
-                    </span>
-                  </OverlayTrigger>
+                  <div>
+                    <OverlayTrigger
+                      key="1"
+                      placement="top"
+                      overlay={<Tooltip id={`tooltip-top`}>Max Atmosphering Speed</Tooltip>}
+                    >
+                      <span className="fw-semibold">
+                        <FontAwesomeIcon icon={faBolt} />
+                      </span>
+                    </OverlayTrigger>
+                  </div>
+                  <div className='fs-6 mt-2'>{starShip.max_atmosphering_speed}</div>
                 </div>
                 <div className="col card-text fs-5">
-                <OverlayTrigger key="1" placement="top" overlay={<Tooltip id={`tooltip-top`}>Crew</Tooltip>}>
-                    <span className="fw-semibold">
-                    <FontAwesomeIcon icon={faUserGear} />
-                    </span>
-                  </OverlayTrigger>
+                  <div>
+                    <OverlayTrigger key="1" placement="top" overlay={<Tooltip id={`tooltip-top`}>Crew</Tooltip>}>
+                      <span className="fw-semibold">
+                        <FontAwesomeIcon icon={faUserGear} />
+                      </span>
+                    </OverlayTrigger>
+                  </div>
+                  <div className='fs-6 mt-2'> {starShip.crew}</div>
                 </div>
                 <div className="col card-text fs-5">
-                <OverlayTrigger key="1" placement="top" overlay={<Tooltip id={`tooltip-top`}>Cargo Capacity</Tooltip>}>
-                    <span className="fw-semibold">
-                    <FontAwesomeIcon icon={faTruckRampBox} />
-                    </span>
-                  </OverlayTrigger>
+                  <div>
+                    <OverlayTrigger
+                      key="1"
+                      placement="top"
+                      overlay={<Tooltip id={`tooltip-top`}>Cargo Capacity</Tooltip>}
+                    >
+                      <span className="fw-semibold">
+                        <FontAwesomeIcon icon={faTruckRampBox} />
+                      </span>
+                    </OverlayTrigger>
+                  </div>
+                  <div className='fs-6 mt-2'>{starShip.cargo_capacity}</div>
                 </div>
               </div>
-              <div className="row mt-2">
-                <div className="col card-text fs-6">
-                  <span>{starShip.hyperdrive_rating}</span>
-                </div>
-                <div className="col card-text fs-6">
-                  <span>{starShip.passengers}</span>
-                </div>
-                <div className="col card-text fs-6">
-                  <span>{starShip.max_atmosphering_speed}</span>
-                </div>
-                <div className="col card-text fs-6">
-                  <span>{starShip.crew}</span>
-                </div>
-                <div className="col card-text fs-6">
-                  <span>{starShip.cargo_capacity}</span>
-                </div>
-              </div>
-            
-             
-              
             </div>
           </div>
         )}

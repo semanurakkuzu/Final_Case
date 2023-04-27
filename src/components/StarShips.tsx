@@ -56,18 +56,17 @@ export default function StarShips() {
       <div className="theme-dark">
         <div className="container-fluid">
           <div className="container text-center pt-3">
-            <img width={500} src={logo} alt="star wars" />
-            <div className="row justify-content-center mt-5">
-              <div className="col-6">
-                <img src={yoda} alt='baby yoda'/>
+            <img className='logo' src={logo} alt="star wars" />
+            <div className="text-center mt-5">
+                <img className="imgYoda" src={yoda} alt='baby yoda'/>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control inputSize mx-auto"
                   placeholder="Enter name or model of starship.."
                   value={searchInputValue}
                   onChange={handleSearchInputChange}
                 />
-              </div>
+              
             </div>
           </div>
           <div className="row justify-content-center mt-5">
