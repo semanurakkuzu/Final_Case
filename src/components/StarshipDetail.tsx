@@ -37,18 +37,18 @@ function StarShipDetail() {
   const starShipCode = starShipImgCodes[id ? Number(id) : 0];
 
   return (
-    <div className="theme-dark">
+    <div className="theme-dark min-vh-100">
       <div className="container pt-5">
         {starShip && (
-          <div className="card mx-auto detailCard py-2">
+          <div className="card mx-auto detailCard  text-center py-2">
             <div className="ms-3">
               <Link to="/" className="float-start fs-3 link text-color">
                 <FontAwesomeIcon icon={faArrowLeftLong} />
               </Link>
             </div>
-            <p className="card-title fs-2 my-4">{starShip.name}</p>
+            <p className="card-title text-color fs-2 my-4">{starShip.name}</p>
             <div className="card-body">
-              <div className="detailImgContainer mb-3">
+              <div className="detailImgContainer d-block rounded-circle mx-auto mb-3">
                 <img src={starShipCode.icon} className="detailCardImg " alt="starship" />
               </div>
               <div className="row">

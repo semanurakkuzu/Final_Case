@@ -7,30 +7,22 @@
 .theme-dark {
   background-image: linear-gradient(135deg, #0e0a16 10%, #08050a 100%);
   background-size: auto;
-  min-height: 100vh;
   font-family: 'Rajdhani', sans-serif;
 }
 
 .cards {
   width: 340px;
-  text-align: center;
-  background-image: url('https://images.unsplash.com/photo-1523693777456-fb08941957cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3RhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&w=1000&q=80');
+  background-image: url('./image/card_background.jpg');
 }
 .card-body {
-  align-items: center;
   color: #d8c7db;
 }
 
 .imgContainer {
   max-width: 200px;
   height: 200px;
-  text-align: center;
   background-color: #140d1a;
   background-image: linear-gradient(135deg, #140d1a 10%, #1a1329 100%);
-  align-items: center;
-  border-radius: 50%;
-  display: block;
-  margin: auto;
 }
 
 .cardImg {
@@ -48,10 +40,7 @@
 
 .detailCard {
   max-width: 800px;
-  text-align: center;
   background-image: linear-gradient(135deg, #140d1a 10%, #1a1329 100%);
-  object-fit: fill;
-  color: #d8c7db;
   object-fit: fill;
 }
 
@@ -71,17 +60,8 @@
 .detailImgContainer {
   max-width: 400px;
   height: 400px;
-  text-align: center;
-  background-image: url('https://images.unsplash.com/photo-1523693777456-fb08941957cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8c3RhcnMlMjBibGFja3xlbnwwfHwwfHw%3D&w=1000&q=80');
-  align-items: center;
-  border-radius: 50%;
-  display: block;
-  margin: auto;
-  color: #d8c7db;
-}
+  background-image: url('./image/card_background.jpg');
 
-.textNoneLine {
-  text-decoration: none;
 }
 
 .text-color {
@@ -93,10 +73,21 @@
 }
 
 .inputSize {
-width: 600px;
+  width: 600px;
 }
 
-@media screen and (max-width: 600px) {
+.loading {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .inputSize {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
   .logo {
     width: 300px;
   }
@@ -104,16 +95,23 @@ width: 600px;
     width: 300px;
   }
   .inputSize {
-    width: 300px;
+    width: 100%;
   }
   .detailCardImg {
-    width: 300px;
-    height: 300px;
-    object-fit: contain;
+    width: 250px;
+    height: 250px;
+    
   }
 
   .detailImgContainer {
-    max-width: 300px;
-    height: 300px;
+    max-width: 250px;
+    height: 250px;
+  }
+
+  .detailCardImg:hover {
+    width: 250px;
+    height: 250px;
+    
+    
   }
 }

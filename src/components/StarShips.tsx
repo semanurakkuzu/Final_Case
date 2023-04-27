@@ -53,7 +53,12 @@ export default function StarShips() {
 
   return (
     <>
-      <div className="theme-dark">
+    <div>
+      {isFetching && !isFetchingNextPage ?
+          <div className='m-0 p-0 fs-2 d-flex position-fixed justify-content-center align-items-center text-white vw-100 vh-100 loading'>Loading... </div>
+          : null}
+    </div>
+      <div className="theme-dark min-vh-100">
         <div className="container-fluid">
           <div className="container text-center pt-3">
             <img className='logo' src={logo} alt="star wars" />
@@ -86,7 +91,6 @@ export default function StarShips() {
               {isFetchingNextPage ? 'Loading more...' : hasNextPage ? 'Load More' : 'Nothing more to load'}
             </button>
           </div>
-          <div className=''>{isFetching && !isFetchingNextPage ? 'Fetching...' : null}</div>
         </div>
       </div>
     </>
