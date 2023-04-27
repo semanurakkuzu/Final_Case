@@ -1,15 +1,22 @@
 import { StarShip } from '../types/Starship'
 import { Link } from "react-router-dom";
+import { starShipImgCodes } from '../starShipImgCodes';
 
 type StarShipCardProps = {
   starShip: StarShip
+  
 }
-
 function StarShipCard({starShip}: StarShipCardProps) {
+  const urlParts = starShip.url.split('starships/')
+  const id = Number(urlParts[urlParts.length - 1].slice(0, -1))
+
+  const starShipCode = starShipImgCodes[id ?? 0]
+
   return (
-    <Link to={`starship/${(starShip.url).split('starships/').pop()}`} className="card" >
-    <img
-      src="https://www.denofgeek.com/wp-content/uploads/2019/12/x-wing.jpg?w=1024"
+    <Link to={`starship/${id}`} className="card bg-dark text-white bg-alpha" >
+   {
+    
+   } <img src={starShipCode.icon}
       className="rounded card-img-top cardImg"
       alt="starship"
     />
