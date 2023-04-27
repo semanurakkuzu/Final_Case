@@ -1,42 +1,56 @@
-import CR90Corvette from  './image/2.jpg'
-import StarDestroyer from './image/3.jpg';
-import SentinelClass from './image/5.jpg';
-import DeathStar from './image/9.jpg'
-import MillenniumFalcon from './image/10.jpg'
-import YWing from './image/11.jpg'
-import XWing from './image/12.jpg'
-import TIEAdvanced from './image/13.jpg'
-import Executor from './image/15.jpg'
-import RebelTransport from './image/17.jpg'
-import Slave1 from './image/21.jpg'
-import ImperialShuttle from './image/22.jpg'
-import EF76NebulonB from './image/23.jpg'
-import CalamariCruiser from './image/27.jpg'
-import AWing from './image/28.jpg'
-import BWing from './image/29.jpg'
-import RepublicCruiser from './image/31.jpg'
-import DroidControlShip from './image/32.jpg'
-import NabooFighter from './image/39.jpg'
-import NabooRoyalStarship from './image/40.jpg'
-import Scimitar from './image/41.jpg'
-import JTypeDiplomaticBarge from './image/43.jpg'
-import AA9CoruscantFreighter from './image/47.jpg'
-import JediStarfighter from './image/48.jpg'
-import HTypeNubianYacht from './image/49.jpg'
-import RepublicAssaultShip from './image/52.jpg'
-import SolarSailer from './image/58.jpg'
-import TradeFederationCruiser from './image/59.png'
-import ThetaClassshuttle from './image/61.jpg'
-import RepublicAttackCruiser from './image/63.jpg'
-import NabooStarSkiff from './image/64.jpg'
-import JediInterceptor from './image/65.jpg'
-import arc170 from './image/66.png'
-import BankingClanFrigte from './image/68.jpg'
-import Belbullab22Starfighter from './image/74.jpg'
-import VWing from './image/75.jpg'
+import Default from './image/0.png';
+import CR90Corvette from './image/2.png';
+import StarDestroyer from './image/3.png';
+import SentinelClass from './image/5.png';
+import DeathStar from './image/9.png';
+import MillenniumFalcon from './image/10.png';
+import YWing from './image/11.png';
+import XWing from './image/12.png';
+import TIEAdvanced from './image/13.png';
+import Executor from './image/15.png';
+import RebelTransport from './image/17.png';
+import Slave1 from './image/21.png';
+import ImperialShuttle from './image/22.png';
+import EF76NebulonB from './image/23.png';
+import CalamariCruiser from './image/27.png';
+import AWing from './image/28.png';
+import BWing from './image/29.png';
+import RepublicCruiser from './image/31.png';
+import DroidControlShip from './image/32.png';
+import NabooFighter from './image/39.png';
+import NabooRoyalStarship from './image/40.png';
+import Scimitar from './image/41.png';
+import JTypeDiplomaticBarge from './image/43.png';
+import AA9CoruscantFreighter from './image/47.png';
+import JediStarfighter from './image/48.png';
+import HTypeNubianYacht from './image/49.png';
+import RepublicAssaultShip from './image/52.png';
+import SolarSailer from './image/58.png';
+import TradeFederationCruiser from './image/59.png';
+import ThetaClassshuttle from './image/61.png';
+import RepublicAttackCruiser from './image/63.png';
+import NabooStarSkiff from './image/64.png';
+import JediInterceptor from './image/65.png';
+import arc170 from './image/66.png';
+import BankingClanFrigte from './image/68.png';
+import Belbullab22Starfighter from './image/74.png';
+import VWing from './image/75.png';
 
+type StarShipImgCodes = {
+    [key: number]: StarShipImgCode;
+}
 
-export default {
+interface StarShipImgCode {
+    title: string,
+    icon: string
+}
+
+export const starShipImgCodes: StarShipImgCodes = {
+  0: {
+    title: 'Default',
+    icon: Default
+  },
+
   2: {
     title: 'CR90 corvette',
     icon: CR90Corvette
