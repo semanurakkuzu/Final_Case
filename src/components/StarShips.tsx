@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../image/starwars_logo.png';
+import logo from '../image/starwars_logo1.png';
 import { useAppSelector } from '../redux/hooks';
 import { useAppDispatch } from '../redux/hooks';
 import { setStarShips } from '../redux/starShipsSlice';
@@ -8,6 +8,7 @@ import { useInfiniteQuery } from 'react-query';
 import { fetchStarShipList } from '../services/starshipService';
 import StarShipCard from './StarShipCard';
 import { useDebounce } from 'use-debounce';
+import yoda from '../image/yoda.png'
 
 export default function StarShips() {
   const [searchInputValue, setSearchInputValue] = useState<string>('');
@@ -48,17 +49,17 @@ export default function StarShips() {
   function handleSearchInputChange(event: React.SyntheticEvent<EventTarget>) {
     setSearchInputValue((event.target as HTMLInputElement).value);
   }
-
   const starShips = useAppSelector((state) => state.starships.starShipData);
 
   return (
     <>
       <div className="theme-dark">
         <div className="container-fluid">
-          <div className="container text-center pt-5">
-            <img width={300} src={logo} alt="star wars" />
+          <div className="container text-center pt-3">
+            <img width={500} src={logo} alt="star wars" />
             <div className="row justify-content-center mt-5">
               <div className="col-6">
+                <img src={yoda} alt='baby yoda'/>
                 <input
                   type="text"
                   className="form-control"
@@ -82,11 +83,11 @@ export default function StarShips() {
               ))}
           </div>
           <div className="text-center">
-            <button onClick={() => fetchNextPage()} disabled={!hasNextPage || isFetchingNextPage}>
+            <button className="btn btn-light" onClick={() => fetchNextPage()} disabled={!hasNextPage || isFetchingNextPage}>
               {isFetchingNextPage ? 'Loading more...' : hasNextPage ? 'Load More' : 'Nothing more to load'}
             </button>
           </div>
-          <div>{isFetching && !isFetchingNextPage ? 'Fetching...' : null}</div>
+          <div className=''>{isFetching && !isFetchingNextPage ? 'Fetching...' : null}</div>
         </div>
       </div>
     </>
