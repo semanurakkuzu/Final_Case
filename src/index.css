@@ -4,76 +4,8 @@
   width: 500px;
 }
 
-.theme-dark {
-  background-image: linear-gradient(135deg, #0e0a16 10%, #08050a 100%);
-  background-size: auto;
-  font-family: 'Rajdhani', sans-serif;
-}
-
-.cards {
-  width: 340px;
-  background-image: url('./image/card_background.jpg');
-}
-.card-body {
-  color: #d8c7db;
-}
-
-.imgContainer {
-  max-width: 200px;
-  height: 200px;
-  background-color: #140d1a;
-  background-image: linear-gradient(135deg, #140d1a 10%, #1a1329 100%);
-}
-
-.cardImg {
-  width: 200px;
-  height: 200px;
-  transition: transform 0.5s ease;
-  object-fit: contain;
-}
-
-.cardImg:hover {
-  width: 200px;
-  height: 200px;
-  transform: scale(1.3);
-}
-
-.detailCard {
-  max-width: 800px;
-  background-image: linear-gradient(135deg, #140d1a 10%, #1a1329 100%);
-  object-fit: fill;
-}
-
-.detailCardImg {
-  width: 400px;
-  height: 400px;
-  transition: transform 0.5s ease;
-  object-fit: contain;
-}
-
-.detailCardImg:hover {
-  width: 400px;
-  height: 400px;
-  transform: scale(1.3);
-}
-
-.detailImgContainer {
-  max-width: 400px;
-  height: 400px;
-  background-image: url('./image/card_background.jpg');
-
-}
-
 .text-color {
   color: #d8c7db;
-}
-
-.link:hover {
-  color: #d4bed8;
-}
-
-.inputSize {
-  width: 600px;
 }
 
 .loading {
@@ -81,8 +13,80 @@
   z-index: 1;
 }
 
+.theme {
+  background-image: linear-gradient(135deg, #0e0a16 10%, #08050a 100%);
+  background-size: auto;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.input-width {
+  width: 600px;
+}
+
+.card-body {
+  color: #d8c7db;
+}
+
+.ship-card {
+  width: 340px;
+  background-image: url('./image/card_background.jpg');
+}
+
+.ship-card-img {
+  width: 200px;
+  height: 200px;
+  transition: transform 0.5s ease;
+  object-fit: contain;
+}
+
+.ship-card-img:hover {
+  width: 200px;
+  height: 200px;
+  transform: scale(1.3);
+}
+
+.ship-card-img-container {
+  max-width: 200px;
+  height: 200px;
+  background-color: #140d1a;
+  background-image: linear-gradient(135deg, #140d1a 10%, #1a1329 100%);
+}
+
+.ship-detail-card {
+  max-width: 800px;
+  background-image: linear-gradient(135deg, #140d1a 10%, #1a1329 100%);
+  object-fit: fill;
+}
+
+.ship-detail-card-img {
+  width: 400px;
+  height: 400px;
+  transition: transform 0.5s ease;
+  object-fit: contain;
+}
+
+.ship-detail-card-img:hover {
+  width: 400px;
+  height: 400px;
+  transform: scale(1.3);
+}
+
+.ship-detail-card-img-container {
+  max-width: 400px;
+  height: 400px;
+  background-image: url('./image/card_background.jpg');
+}
+
+.back-button-color {
+  color: #d4bed8;
+}
+
+.back-button-color:hover {
+  color: #d4bed8;
+}
+
 @media screen and (max-width: 768px) {
-  .inputSize {
+  .input-width {
     width: 100%;
   }
 }
@@ -91,27 +95,27 @@
   .logo {
     width: 300px;
   }
-  .imgYoda {
+
+  .img-yoda {
     width: 300px;
   }
-  .inputSize {
+
+  .input-width {
     width: 100%;
   }
-  .detailCardImg {
+
+  .ship-detail-card-img {
     width: 250px;
     height: 250px;
-    
   }
 
-  .detailImgContainer {
+  .ship-detail-card-img:hover {
+    width: 250px;
+    height: 250px;
+  }
+
+  .ship-detail-card-img-container {
     max-width: 250px;
     height: 250px;
-  }
-
-  .detailCardImg:hover {
-    width: 250px;
-    height: 250px;
-    
-    
   }
 }
