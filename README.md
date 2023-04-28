@@ -37,7 +37,7 @@ On the detail page, users can go back to the home page.
 
 To run the application locally, do the following:
 
-1. Clone this repository: git clone [copy repository URL]
+1. Clone this repository: git clone https://github.com/semanurakkuzu/Final_Case.git
 2. Go to the project folder: cd starship-search-app
 3. Install dependencies: npm install
 4. Run the application: npm start
