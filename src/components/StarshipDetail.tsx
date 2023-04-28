@@ -37,19 +37,19 @@ function StarShipDetail() {
   const starShipCode = starShipImgCodes[id ? Number(id) : 0];
 
   return (
-    <div className="theme-dark min-vh-100">
+    <div className="theme min-vh-100">
       <div className="container pt-5">
         {starShip && (
-          <div className="card mx-auto detailCard  text-center py-2">
+          <div className="card mx-auto text-center py-2 ship-detail-card">
             <div className="ms-3">
-              <Link to="/" className="float-start fs-3 link text-color">
+              <Link to="/" className="float-start fs-3 back-button-color">
                 <FontAwesomeIcon icon={faArrowLeftLong} />
               </Link>
             </div>
             <p className="card-title text-color fs-2 my-4">{starShip.name}</p>
             <div className="card-body">
-              <div className="detailImgContainer d-block rounded-circle mx-auto mb-3">
-                <img src={starShipCode.icon} className="detailCardImg " alt="starship" />
+              <div className="d-block rounded-circle mx-auto mb-3 ship-detail-card-img-container">
+                <img src={starShipCode.icon} className="ship-detail-card-img" alt="starship" />
               </div>
               <div className="row">
                 <div className="col card-text fs-6">
@@ -74,7 +74,7 @@ function StarShipDetail() {
                       </span>
                     </OverlayTrigger>
                   </div>
-                  <div className='fs-6 mt-2'>{starShip.hyperdrive_rating}</div>
+                  <div className="fs-6 mt-2">{starShip.hyperdrive_rating}</div>
                 </div>
                 <div className="col card-text fs-5">
                   <div>
@@ -84,7 +84,7 @@ function StarShipDetail() {
                       </span>
                     </OverlayTrigger>
                   </div>
-                  <div className='fs-6 mt-2'>{starShip.passengers}</div>
+                  <div className="fs-6 mt-2">{starShip.passengers}</div>
                 </div>
                 <div className="col card-text fs-5">
                   <div>
@@ -98,7 +98,7 @@ function StarShipDetail() {
                       </span>
                     </OverlayTrigger>
                   </div>
-                  <div className='fs-6 mt-2'>{starShip.max_atmosphering_speed}</div>
+                  <div className="fs-6 mt-2">{starShip.max_atmosphering_speed}</div>
                 </div>
                 <div className="col card-text fs-5">
                   <div>
@@ -108,7 +108,7 @@ function StarShipDetail() {
                       </span>
                     </OverlayTrigger>
                   </div>
-                  <div className='fs-6 mt-2'> {starShip.crew}</div>
+                  <div className="fs-6 mt-2"> {starShip.crew}</div>
                 </div>
                 <div className="col card-text fs-5">
                   <div>
@@ -122,7 +122,7 @@ function StarShipDetail() {
                       </span>
                     </OverlayTrigger>
                   </div>
-                  <div className='fs-6 mt-2'>{starShip.cargo_capacity}</div>
+                  <div className="fs-6 mt-2">{starShip.cargo_capacity}</div>
                 </div>
               </div>
             </div>

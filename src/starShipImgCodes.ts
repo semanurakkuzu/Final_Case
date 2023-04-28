@@ -37,12 +37,12 @@ import Belbullab22Starfighter from './image/74.png';
 import VWing from './image/75.png';
 
 type StarShipImgCodes = {
-    [key: number]: StarShipImgCode;
+  [key: number]: StarShipImgCode;
 }
 
 interface StarShipImgCode {
-    title: string,
-    icon: string
+  title: string
+  icon: string
 }
 
 export const starShipImgCodes: StarShipImgCodes = {

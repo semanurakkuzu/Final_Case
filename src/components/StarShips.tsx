@@ -8,7 +8,7 @@ import { useInfiniteQuery } from 'react-query';
 import { fetchStarShipList } from '../services/starshipService';
 import StarShipCard from './StarShipCard';
 import { useDebounce } from 'use-debounce';
-import yoda from '../image/yoda.png'
+import yoda from '../image/yoda.png';
 
 export default function StarShips() {
   const [searchInputValue, setSearchInputValue] = useState<string>('');
@@ -16,21 +16,13 @@ export default function StarShips() {
   const dispatch = useAppDispatch();
   const [debouncedSearchInputValue] = useDebounce<string>(searchInputValue, 500);
 
-  const {
-    data,
-
-    fetchNextPage,
-    hasNextPage,
-    isFetching,
-    isFetchingNextPage,
-    status
-  } = useInfiniteQuery(
+  const { data, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage, status } = useInfiniteQuery(
     ['ships', debouncedSearchInputValue],
 
     ({ pageParam }) => fetchStarShipList(debouncedSearchInputValue, pageParam),
     {
       getNextPageParam: (lastPages, pages) => {
-        if ( lastPages.next === null) {
+        if (lastPages.next === null) {
           return;
         }
 
@@ -38,7 +30,6 @@ export default function StarShips() {
       }
     }
   );
-  console.log(data)
 
   useEffect(() => {
     if (status === 'success') {
@@ -53,25 +44,26 @@ export default function StarShips() {
 
   return (
     <>
-    <div>
-      {isFetching && !isFetchingNextPage ?
-          <div className='m-0 p-0 fs-2 d-flex position-fixed justify-content-center align-items-center text-white vw-100 vh-100 loading'>Loading... </div>
-          : null}
-    </div>
-      <div className="theme-dark min-vh-100">
+      <div>
+        {isFetching && !isFetchingNextPage ? (
+          <div className="m-0 p-0 fs-2 d-flex position-fixed justify-content-center align-items-center text-white vw-100 vh-100 loading">
+            Loading...{' '}
+          </div>
+        ) : null}
+      </div>
+      <div className="theme min-vh-100">
         <div className="container-fluid">
           <div className="container text-center pt-3">
-            <img className='logo' src={logo} alt="star wars" />
+            <img className="logo" src={logo} alt="star wars" />
             <div className="text-center mt-5">
-                <img className="imgYoda" src={yoda} alt='baby yoda'/>
-                <input
-                  type="text"
-                  className="form-control inputSize mx-auto"
-                  placeholder="Enter name or model of starship.."
-                  value={searchInputValue}
-                  onChange={handleSearchInputChange}
-                />
-              
+              <img className="img-yoda" src={yoda} alt="baby yoda" />
+              <input
+                type="text"
+                className="form-control mx-auto input-width"
+                placeholder="Enter name or model of starship.."
+                value={searchInputValue}
+                onChange={handleSearchInputChange}
+              />
             </div>
           </div>
           <div className="row justify-content-center mt-5">
@@ -87,7 +79,11 @@ export default function StarShips() {
               ))}
           </div>
           <div className="text-center">
-            <button className="btn btn-light" onClick={() => fetchNextPage()} disabled={!hasNextPage || isFetchingNextPage}>
+            <button
+              className="btn btn-light"
+              onClick={() => fetchNextPage()}
+              disabled={!hasNextPage || isFetchingNextPage}
+            >
               {isFetchingNextPage ? 'Loading more...' : hasNextPage ? 'Load More' : 'Nothing more to load'}
             </button>
           </div>

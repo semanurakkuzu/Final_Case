@@ -12,14 +12,13 @@ function StarShipCard({ starShip }: StarShipCardProps) {
   const starShipCode = starShipImgCodes[id ?? 0];
 
   return (
-    <Link to={`starship/${id}`} className="card cards text-center text-white text-decoration-none">
-      
+    <Link to={`starship/${id}`} className="card text-center text-white text-decoration-none ship-card">
       <div className="card-body">
-        <div className='imgContainer rounded-circle d-block mx-auto'> 
-          <img src={starShipCode.icon} className="cardImg" alt="starship" />
+        <div className="rounded-circle d-block mx-auto ship-card-img-container">
+          <img src={starShipCode.icon} className="ship-card-img" alt="starship" />
         </div>
         <p className="card-title fs-4 fw-bolder mt-3">{starShip.name}</p>
-        
+
         <div className="card-text fs-6 mt-2">
           <div className="fw-semibold">Model</div>
           <span>{starShip.model}</span>
