@@ -54,13 +54,12 @@ To run the application locally, do the following:
 
 ## Screenshot Web
 
-![home](https://user-images.githubusercontent.com/110597975/235127873-5503a9fc-c466-43b5-9c41-1ab51562c60d.png)
+![img_web](https://user-images.githubusercontent.com/110597975/235299949-63deedfa-5be5-4ee6-9d85-9920d95f064a.png)
 
-![web1](https://user-images.githubusercontent.com/110597975/235129354-3cf9af65-bd45-423f-ba71-4061b251468d.png)
+![img_web2](https://user-images.githubusercontent.com/110597975/235299952-53baaa74-1645-4644-8e38-787ddf37f1fd.png)
 
 
 ## Screenshot Mobile
 
-![mobile1](https://user-images.githubusercontent.com/110597975/235128727-f1de4151-0f82-4750-8632-ff8f45aa9045.png)
-![mobile2](https://user-images.githubusercontent.com/110597975/235128733-a7ed825d-52ca-4a7b-b6cd-c88f227e38e7.png)
-
+![img_phone1](https://user-images.githubusercontent.com/110597975/235299959-215578a5-3f19-4126-9499-02981cdb92c5.png)
+![img_phone2](https://user-images.githubusercontent.com/110597975/235299963-5c1d74e6-3e39-4795-898f-93b2a652bdba.png)
