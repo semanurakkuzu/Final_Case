@@ -16,7 +16,7 @@ import {
 import { setStarShip } from '../redux/starShipDetailSlice';
 import { fetchShip } from '../services/starshipService';
 import { starShipImgCodes } from '../starShipImgCodes';
-import StarShipFeatures from './StarShipFeatures';
+import StarShipFeature from './StarShipFeature';
 
 function StarShipDetail() {
   const { id } = useParams();
@@ -61,11 +61,11 @@ function StarShipDetail() {
                 </div>
               </div>
               <div className="row mt-5">
-              <StarShipFeatures featuresName={"Hyperdrive Rating"} icon={faSpaceShuttle} features={starShip.hyperdrive_rating}></StarShipFeatures>
-              <StarShipFeatures featuresName={"Passengers"} icon={faUserGroup} features={starShip.passengers}></StarShipFeatures>
-              <StarShipFeatures featuresName={"Max Atmosphering Speed"} icon={faBolt} features={starShip.max_atmosphering_speed}></StarShipFeatures>
-              <StarShipFeatures featuresName={"Crew"} icon={faUserGear} features={starShip.crew}></StarShipFeatures>
-              <StarShipFeatures featuresName={"Cargo Capacity"} icon={faTruckRampBox} features={starShip.cargo_capacity}></StarShipFeatures>
+              <StarShipFeature title={"Hyperdrive Rating"} icon={faSpaceShuttle} feature={starShip.hyperdrive_rating}/>
+              <StarShipFeature title={"Passengers"} icon={faUserGroup} feature={starShip.passengers}/>
+              <StarShipFeature title={"Max Atmosphering Speed"} icon={faBolt} feature={starShip.max_atmosphering_speed}/>
+              <StarShipFeature title={"Crew"} icon={faUserGear} feature={starShip.crew} />
+              <StarShipFeature title={"Cargo Capacity"} icon={faTruckRampBox} feature={starShip.cargo_capacity}/>/
               </div>
             </div>
           </div>
