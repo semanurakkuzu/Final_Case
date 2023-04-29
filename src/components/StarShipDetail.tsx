@@ -65,7 +65,7 @@ function StarShipDetail() {
               <StarShipFeature title={"Passengers"} icon={faUserGroup} feature={starShip.passengers}/>
               <StarShipFeature title={"Max Atmosphering Speed"} icon={faBolt} feature={starShip.max_atmosphering_speed}/>
               <StarShipFeature title={"Crew"} icon={faUserGear} feature={starShip.crew} />
-              <StarShipFeature title={"Cargo Capacity"} icon={faTruckRampBox} feature={starShip.cargo_capacity}/>/
+              <StarShipFeature title={"Cargo Capacity"} icon={faTruckRampBox} feature={starShip.cargo_capacity}/>
               </div>
             </div>
           </div>
