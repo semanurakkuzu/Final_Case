@@ -1,6 +1,7 @@
 # Starship Search App
 
 This project is a starship search application that uses the Star Wars API.
+
 The application can be found at the following address: https://main--eclectic-axolotl-285ae3.netlify.app/
 
 ## Tools Used
