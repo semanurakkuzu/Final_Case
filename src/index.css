@@ -14,7 +14,7 @@
 }
 
 .theme {
-  background-image: linear-gradient(135deg, #0e0a16 10%, #08050a 100%);
+  background-image: linear-gradient(135deg, #1e1630 10%, #2a1b35 100%);
   background-size: auto;
   font-family: 'Rajdhani', sans-serif;
 }
@@ -49,12 +49,12 @@
   max-width: 200px;
   height: 200px;
   background-color: #140d1a;
-  background-image: linear-gradient(135deg, #140d1a 10%, #1a1329 100%);
+  background-image: linear-gradient(135deg,  #2a1b35 10%, #1e1630 100%);
 }
 
 .ship-detail-card {
   max-width: 800px;
-  background-image: linear-gradient(135deg, #140d1a 10%, #1a1329 100%);
+  background-image: linear-gradient(135deg,  #2a1b35 10%,  #1e1630 100%);
   object-fit: fill;
 }
 
