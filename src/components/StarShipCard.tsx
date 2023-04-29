@@ -1,10 +1,11 @@
-import { StarShip } from '../types/Starship';
 import { Link } from 'react-router-dom';
+import { StarShip } from '../types/Starship';
 import { starShipImgCodes } from '../starShipImgCodes';
 
 type StarShipCardProps = {
   starShip: StarShip;
 };
+
 function StarShipCard({ starShip }: StarShipCardProps) {
   const urlParts = starShip.url.split('starships/');
   const id = Number(urlParts[urlParts.length - 1].slice(0, -1));
@@ -18,7 +19,6 @@ function StarShipCard({ starShip }: StarShipCardProps) {
           <img src={starShipCode.icon} className="ship-card-img" alt="starship" />
         </div>
         <p className="card-title fs-4 fw-bolder mt-3">{starShip.name}</p>
-
         <div className="card-text fs-6 mt-2">
           <div className="fw-semibold">Model</div>
           <span>{starShip.model}</span>

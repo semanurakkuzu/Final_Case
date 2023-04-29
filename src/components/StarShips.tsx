@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../image/starwars_logo1.png';
 import { useAppSelector } from '../redux/hooks';
 import { useAppDispatch } from '../redux/hooks';
-import { setStarShips } from '../redux/starShipsSlice';
-import { StarShip } from '../types/Starship';
 import { useInfiniteQuery } from 'react-query';
-import { fetchStarShipList } from '../services/starshipService';
-import StarShipCard from './StarShipCard';
 import { useDebounce } from 'use-debounce';
+import { setStarShips } from '../redux/starShipsSlice';
+import { fetchStarShipList } from '../services/starshipService';
+import { StarShip } from '../types/Starship';
+import StarShipCard from './StarShipCard';
 import yoda from '../image/yoda.png';
+import logo from '../image/starwars_logo.png';
 
 export default function StarShips() {
+  const dispatch = useAppDispatch();
+
   const [searchInputValue, setSearchInputValue] = useState<string>('');
 
-  const dispatch = useAppDispatch();
   const [debouncedSearchInputValue] = useDebounce<string>(searchInputValue, 500);
 
   const { data, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage, status } = useInfiniteQuery(
@@ -37,9 +38,10 @@ export default function StarShips() {
     }
   }, [data, dispatch, status]);
 
-  function handleSearchInputChange(event: React.SyntheticEvent<EventTarget>) {
+  const handleSearchInputChange = (event: React.SyntheticEvent<EventTarget>) => {
     setSearchInputValue((event.target as HTMLInputElement).value);
   }
+
   const starShips = useAppSelector((state) => state.starships.starShipData);
 
   return (
@@ -47,7 +49,7 @@ export default function StarShips() {
       <div>
         {isFetching && !isFetchingNextPage ? (
           <div className="m-0 p-0 fs-2 d-flex position-fixed justify-content-center align-items-center text-white vw-100 vh-100 loading">
-            Loading...{' '}
+            Loading...
           </div>
         ) : null}
       </div>

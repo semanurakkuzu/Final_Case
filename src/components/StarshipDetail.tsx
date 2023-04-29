@@ -1,5 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router';
+import { useQuery } from 'react-query';
+import { useAppDispatch } from '../redux/hooks';
+import { useAppSelector } from '../redux/hooks';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowLeftLong,
@@ -9,15 +15,9 @@ import {
   faSpaceShuttle,
   faTruckRampBox
 } from '@fortawesome/free-solid-svg-icons';
-import { useAppDispatch } from '../redux/hooks';
-import { useAppSelector } from '../redux/hooks';
 import { setStarShip } from '../redux/starShipDetailSlice';
-import { useParams } from 'react-router';
-import { useQuery } from 'react-query';
 import { fetchShip } from '../services/starshipService';
 import { starShipImgCodes } from '../starShipImgCodes';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
 
 function StarShipDetail() {
   const { id } = useParams();
