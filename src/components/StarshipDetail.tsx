@@ -4,8 +4,6 @@ import { useParams } from 'react-router';
 import { useQuery } from 'react-query';
 import { useAppDispatch } from '../redux/hooks';
 import { useAppSelector } from '../redux/hooks';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Tooltip from 'react-bootstrap/Tooltip';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArrowLeftLong,
@@ -18,6 +16,7 @@ import {
 import { setStarShip } from '../redux/starShipDetailSlice';
 import { fetchShip } from '../services/starshipService';
 import { starShipImgCodes } from '../starShipImgCodes';
+import StarShipFeatures from './StarShipFeatures';
 
 function StarShipDetail() {
   const { id } = useParams();
@@ -62,68 +61,11 @@ function StarShipDetail() {
                 </div>
               </div>
               <div className="row mt-5">
-                <div className="col card-text fs-5">
-                  <div>
-                    <OverlayTrigger
-                      key="1"
-                      placement="top"
-                      overlay={<Tooltip id="tooltip-top">Hyperdrive Rating</Tooltip>}
-                    >
-                      <span className="fw-semibold">
-                        <FontAwesomeIcon icon={faSpaceShuttle} />
-                      </span>
-                    </OverlayTrigger>
-                  </div>
-                  <div className="fs-6 mt-2">{starShip.hyperdrive_rating}</div>
-                </div>
-                <div className="col card-text fs-5">
-                  <div>
-                    <OverlayTrigger key="1" placement="top" overlay={<Tooltip id={'tooltip-top'}>Passengers</Tooltip>}>
-                      <span className="fw-semibold">
-                        <FontAwesomeIcon icon={faUserGroup} />
-                      </span>
-                    </OverlayTrigger>
-                  </div>
-                  <div className="fs-6 mt-2">{starShip.passengers}</div>
-                </div>
-                <div className="col card-text fs-5">
-                  <div>
-                    <OverlayTrigger
-                      key="1"
-                      placement="top"
-                      overlay={<Tooltip id={`tooltip-top`}>Max Atmosphering Speed</Tooltip>}
-                    >
-                      <span className="fw-semibold">
-                        <FontAwesomeIcon icon={faBolt} />
-                      </span>
-                    </OverlayTrigger>
-                  </div>
-                  <div className="fs-6 mt-2">{starShip.max_atmosphering_speed}</div>
-                </div>
-                <div className="col card-text fs-5">
-                  <div>
-                    <OverlayTrigger key="1" placement="top" overlay={<Tooltip id={`tooltip-top`}>Crew</Tooltip>}>
-                      <span className="fw-semibold">
-                        <FontAwesomeIcon icon={faUserGear} />
-                      </span>
-                    </OverlayTrigger>
-                  </div>
-                  <div className="fs-6 mt-2"> {starShip.crew}</div>
-                </div>
-                <div className="col card-text fs-5">
-                  <div>
-                    <OverlayTrigger
-                      key="1"
-                      placement="top"
-                      overlay={<Tooltip id={`tooltip-top`}>Cargo Capacity</Tooltip>}
-                    >
-                      <span className="fw-semibold">
-                        <FontAwesomeIcon icon={faTruckRampBox} />
-                      </span>
-                    </OverlayTrigger>
-                  </div>
-                  <div className="fs-6 mt-2">{starShip.cargo_capacity}</div>
-                </div>
+              <StarShipFeatures featuresName={"Hyperdrive Rating"} icon={faSpaceShuttle} features={starShip.hyperdrive_rating}></StarShipFeatures>
+              <StarShipFeatures featuresName={"Passengers"} icon={faUserGroup} features={starShip.passengers}></StarShipFeatures>
+              <StarShipFeatures featuresName={"Max Atmosphering Speed"} icon={faBolt} features={starShip.max_atmosphering_speed}></StarShipFeatures>
+              <StarShipFeatures featuresName={"Crew"} icon={faUserGear} features={starShip.crew}></StarShipFeatures>
+              <StarShipFeatures featuresName={"Cargo Capacity"} icon={faTruckRampBox} features={starShip.cargo_capacity}></StarShipFeatures>
               </div>
             </div>
           </div>
