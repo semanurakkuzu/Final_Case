@@ -1,31 +1,14 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {  RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
-import './index.css';
-import App from './App';
-import StarShipDetail from './components/StarShipDetail';
-import Error from './components/Error';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
+import router from './router'
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />
-  },
-  {
-    path: '/starship/:id',
-    element: <StarShipDetail />
-  },
-  {
-    path: '*',
-    element: <Error />
-  }
-]);
 
 const queryClient = new QueryClient();
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
